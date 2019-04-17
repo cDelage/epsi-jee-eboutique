@@ -1,1 +1,8 @@
 language : java
+
+install:
+ - mvn install
+ - mvn sonar:sonar -Dsonar.projectKey=cDelage_epsi-jee-eboutique
+               -Dsonar.organization=cdelage-github
+               -Dsonar.host.url=https://sonarcloud.io
+               -Dsonar.login=cd7fe4f772b5d834df037849ee13e130a228b7e
