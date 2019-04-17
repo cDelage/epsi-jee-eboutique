@@ -1,4 +1,4 @@
-package fr.epsi.eboutique.web.controller.admin
+package fr.epsi.eboutique.web.controller.admin;
 
 public class CommandeController {
 
