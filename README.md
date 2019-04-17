@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/cDelage/epsi-jee-eboutique.svg?branch=master)](https://travis-ci.org/cDelage/epsi-jee-eboutique)
