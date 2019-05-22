@@ -8,13 +8,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import fr.epsi.eboutique.business.entity.Produit;
 import fr.epsi.eboutique.business.service.MarqueService;
+import fr.epsi.eboutique.business.service.ProduitService;
 
 @Controller
 public class AccueilController {
 
   @Inject
   private MarqueService marqueService;
+  
+  @Inject
+  private ProduitService produitService;
   
   /**
    * Permet d'afficher la page d'accueil
@@ -25,12 +30,15 @@ public class AccueilController {
   @GetMapping("/accueil")
   public ModelAndView displayAccueil(@RequestParam(required = false) String critere) {
     ModelAndView mv = new ModelAndView("public/accueil");
-    mv.addObject("marques", this.marqueService.findAll());
-    
+    mv.addObject("marque", this.marqueService.findAll());
+
+    System.out.println(mv.toString());
     //TODO Recuperer les 10 premiers produits
-    
+
     //TODO Recuperer le nombre total de produits afin de permettre la pagination
-    
+    ModelAndView mvprod = new ModelAndView("public/accueil");
+    mvprod.addObject("produit", this.produitService.findAll());
+    System.out.println("-----------------------------------------------------------");
     return mv;
   }
   

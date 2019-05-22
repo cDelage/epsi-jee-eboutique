@@ -19,6 +19,6 @@ public class MarqueDao {
   private EntityManager em;
   
   public Collection<Marque> findAll(){
-    return Collections.emptyList();
+    return em.createQuery("select libelle from marque").getResultList();
   }
 }

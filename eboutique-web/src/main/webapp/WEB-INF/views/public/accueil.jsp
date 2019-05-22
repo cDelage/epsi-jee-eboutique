@@ -14,10 +14,19 @@
 			<div class="row">
 				<div class="col-md-4">
 				<!--  Mettre en place le formulaire de recherche -->
-				Partie Recherche</div>
+				<label for="Search">Partie Recherche</label>
+				<input type="Text" id="SearchInput"></input>
+				</div>
 				<div class="col-md-8">
 				<!-- Afficher la liste des mobiles -->
-				Liste des mobiles</div>
+				<label for="ListMobil">Liste des mobiles</label>
+				<ul>
+				<li>
+				</li>
+				<li>
+				</li>
+				</ul>
+				</div>
 			</div>
 		</div>
 	<main>

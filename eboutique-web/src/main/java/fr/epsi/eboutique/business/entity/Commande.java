@@ -3,10 +3,19 @@ package fr.epsi.eboutique.business.entity;
 import java.time.LocalDate;
 import java.util.Collection;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity (name="commande")
+@Table (name="commande")
 public class Commande {
 
+  @Id
   private Long identifier;
   
+  @OneToMany
   private Collection<CommandeLigne> lignes;
   
   private LocalDate dateCreation;

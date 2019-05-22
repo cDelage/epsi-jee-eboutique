@@ -2,8 +2,16 @@ package fr.epsi.eboutique.business.entity;
 
 import java.math.BigDecimal;
 
-public class Produit {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
+@Entity (name="produit")
+@Table (name="produit")
+public class Produit {
+  
+  @Id	
   private Long identifier;
   
   private String libelle;
@@ -12,6 +20,7 @@ public class Produit {
   
   private BigDecimal prix;
   
+  @ManyToOne 
   private Marque marque;
 
   public Long getIdentifier() {
